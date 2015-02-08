@@ -8,6 +8,9 @@ html{
   text-transform: uppercase;
   font-weight: bold;
 }
+body{
+  background-color: #25262c;
+}
 .headerlayout:after {
    content: " ";
    visibility: hidden;
@@ -16,12 +19,10 @@ html{
    clear: both;
 }
 nav{
-    float: right;
+    float: none;
     border-bottom: 5px solid #1acac8;
 }
 nav ul li{
-
-  background-color: red;
   display: inline;
 }
 .nav:after {
@@ -136,9 +137,9 @@ footer{
 }
 .footcol1, .footcol2, .footcol3{
   width: 30%;
-  height: 400px;
+  height: 300px;
   display: inline-block;
-  background-color: rgba(123,231,22,.3);
+  background-color: #25262c);
   font-size: 1.3em;
   line-height: 2.5em;
   text-align: left;
@@ -146,6 +147,9 @@ footer{
 
 .footmark{
   text-align: center;
+  vertical-align: middle;
+      margin: 5%;
+
 }
 a{
   color: #1acac8;
@@ -176,13 +180,13 @@ a:hover{
     background-position: -376px, 0;
   }
   header{
-    max-width: 500px;
+    max-width: 400px;
   }
   .content{
-    max-width: 500px;
+    max-width: 400px;
   }
   footer{
-    max-width: 500px;
+    max-width: 400px;
   }
   .footcol2{
     visibility: hidden;
@@ -213,6 +217,13 @@ a:hover{
   }
   footer{
     max-width: 1200px;
+  }
+  .footmark{
+    color: #25262c;
+    background-color: #1acac8;
+    vertical-align: text-bottom;
+    width: 90%;
+    height: 2em;
   }
 }
  
