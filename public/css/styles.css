@@ -11,19 +11,19 @@ html{
 }
 
 body{
-  background-color: red;
+  background-color: #25262c;
 }
 
 nav{
-  background-color: #fff;
+  background-color: #25262c;
   margin-top: 30px;
   float: right;
+  font-size: .9em;
 }
 nav ul li{
   display: inline;
-  background-color: red;
+  /* background-color: red; */
 }
-
 
 .hamburger{
   visibility: hidden;
@@ -47,24 +47,24 @@ div h1{
   padding: 10px;
   font-size: 1.4em;
   color: #1acac8;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .flappy{
-  /* z-index: -1; */
+  max-width: 30%;
   float: left;  
 }
 .scenery{
   background-image: url(/images/scenery.png);
-  /* min-width: 400px; */
+  max-width: 700px;
   /* width: auto; */
   height: 266px;
   background-repeat: no-repeat;
   background-position: right;
 }
 
-div.features{
+/* .shadow{
   box-shadow: 1px 1px 16px #999999;
-}
+} */
 
 div.features ul li{
   background-color: #1acac8;
@@ -72,13 +72,14 @@ div.features ul li{
   text-align: center;
   padding: 1em;
   border-top: thin solid #123123;
+  box-shadow: 1px 1px 16px #999999;
+
 }
 div.features ul li:first-child{
   /*feature header*/
   background-color: #25262C;
   color: #1acac8;
   text-align: center;
-  /* padding: 1em; */
 }
 
 
@@ -107,14 +108,14 @@ p{
   padding-bottom: 1em;
 }
 .footcol1, .footcol2, .footcol3{
-height: 200px;
+  height: 150px;
   display: inline-block;
   background-color: #25262c;
   font-size: .9em;
   line-height: 1.8em;
   text-align: left;
-  background-color: #fff;
-  vertical-align: middle;
+  background-color: #25262c;
+  vertical-align: text-top;
   margin-top: 20px;
   padding: 10px;
 }
@@ -122,19 +123,19 @@ height: 200px;
 .footmark{
   text-align: center;
   vertical-align: middle;
-  /* margin: 5%; */
-
 }
 a{
   color: #1acac8;
   text-decoration: none;
+
 }
 
 a:hover{
   color: #ffffff;
+
 }
 
-/* small */
+/* ------------------------------------ small */
 @media only screen and (max-width: 450px){
   nav{
     visibility: hidden;
@@ -145,11 +146,7 @@ a:hover{
     background-color: red;
   }
   div h1{
-    width: 12em;
-  }
-  .scenery{
-    height: 266px;
-    background-position: right, 0;
+    width: 13em;
   }
   header{
     max-width: 420px;
@@ -166,23 +163,20 @@ a:hover{
   }
   .footcol1, .footcol3{
     width: 40%;
-    background-color: red;
-  }
+/*     background-color: red;
+   */  }
 }
 
-/* medium */
+/* ------------------------------------ medium */
   @media only screen and (min-width: 451px) and (max-width: 700px){
   nav{
     visibility: visible;
-    display: none;
+    /* display: none; */
   }
   div h1{
     width: 10em;
   }
-  .scenery{
-    height: 266px;
-    background-position: right, 0;
-  }
+
   header{
     max-width: 960px;
   }
@@ -194,21 +188,32 @@ a:hover{
   }
   .footcol1, .footcol3{
     width: 20%;
-    background-color: blue;
+    background-color: #25262c;
   }
   .footcol2{
     width: 40%;
-    background-color: blue;
+    background-color: #25262c;
   }
 } 
 
-/* large */
+/* ------------------------------------ large */
   @media only screen and (min-width: 701px) and (max-width: 960px){
   div h1{
-    width: 10em;
+    padding-left: 10%;
+    font-size: 3em;
+    width: 7.5em;
+    word-spacing: 20px;
   }
   header{
     max-width: 1200px;
+  }
+  .flappy{
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+  }
+  header div span{
+    color: #1acac8;
   }
   .content{
     max-width: 1200px;
@@ -220,46 +225,119 @@ a:hover{
     color: #25262c;
     background-color: #1acac8;
     vertical-align: text-bottom;
-    /* width: 90%; */
     height: 2em;
   }
   nav{
-  border-bottom: 5px solid #1acac8;
+    visibility: visible;
+    margin: 2em 2em 2em 2em;
+    border-bottom: thick solid #1acac8;
   }
   nav ul li:hover{
-  border-bottom: 5px solid #ffffff;
+    padding-bottom: 1em;
+    border-bottom: 5px solid #ffffff;
+  }
+  .scenery{
+    border: medium solid #000000;
+    margin-top: 5%;
+    margin-left: 5%;
+    float: left;
+    min-width: 450px;
+    height: 266px;
+    background-position: right, 0;
+    box-shadow: 1px 1px 16px #999999;
+
+  }
+  div.features{
+    float: right;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+
+  .footcol1, .footcol2, .footcol3{
+    /* padding: 20px; */
+    width: 25%;
+    background-color: #25262c;
+    border-left: medium solid #25262c;
+  }
+  div.footmap ul li{
+    padding-left: 2em;
+    border-left: medium solid #1acac8;
+  }
+
+  .footmark{
+    color: #25262c;
+    background-color: #1acac8;
+    margin: 0 5% 5%;
+    padding: .5em; 
   }
 }
 
-/* VERY LARGE */
+/* ------------------------------------ VERY LARGE */
   @media only screen and (min-width: 961px){
+
+  div h1{
+    padding-left: 10%;
+    font-size: 3em;
+    width: 7.5em;
+    word-spacing: 1em;
+  }
+  .flappy{
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+  }
+  header div span{
+    color: #1acac8;
+  }
   nav{
     visibility: visible;
-    display: none;
+    margin: 2em 2em 2em 2em;
+    border-bottom: thick solid #1acac8;
   }
-  div h1{
-    width: 250px;
+
+  nav ul li:hover{
+    padding-bottom: 1em;
+    border-bottom: 5px solid #fff;
   }
   .scenery{
+    border: medium solid #000000;
+    margin-top: 5%;
+    margin-left: 9%;
+    float: left;
+    min-width: 600px;
     height: 266px;
     background-position: right, 0;
+    box-shadow: 1px 1px 16px #999999;
+
+  }
+  div.features{
+    float: right;
+    margin-top: 5%;
+    margin-right: 9%;
   }
   header{
-    max-width: 1200px;
+    max-width: 100%;
   }
   .content{
-    max-width: 1200px;
+    max-width: 100%;
   }
   footer{
-    max-width: 1200px;
+    max-width: 100%;
   }
-  .footcol1, .footcol3{
-    width: 40%;
-    background-color: blue;
+  .footcol1, .footcol2, .footcol3{
+    /* padding: 20px; */
+    width: 25%;
+    background-color: #25262c;
   }
-  .footcol2{
-    width: 40%;
-    background-color: blue;
+  div.footmap ul li{
+    border-left: medium solid #1acac8;
+    padding-left: 2em;
+  }
+  .footmark{
+    color: #25262c;
+    background-color: #1acac8;
+    margin: 0 5% 5%;
+    padding: .5em; 
   }
 }   
 /* dark blue:
