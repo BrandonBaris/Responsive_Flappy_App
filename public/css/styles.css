@@ -15,17 +15,19 @@ body{
 }
 
 nav{
-  border-bottom: 5px solid #1acac8;
+  background-color: #fff;
+  margin-top: 30px;
   float: right;
 }
 nav ul li{
-  display: inline-block;
+  display: inline;
+  background-color: red;
 }
 
-nav ul li:hover{
-  border-bottom: 5px solid #ffffff;
-}
 
+.hamburger{
+  visibility: hidden;
+}
 .headlayout{
   vertical-align: middle;
   background-color: #25262c;
@@ -38,13 +40,14 @@ nav ul li:hover{
 /*   padding-left: 150px; */
   height: 73px;
   background-color: #25262c;
+  float: left;
 }
 
 div h1{
-  padding: 20px;
-  background-color: #fff;
+  padding: 10px;
   font-size: 1.4em;
   color: #1acac8;
+  background-color: #fff;
 }
 .flappy{
   /* z-index: -1; */
@@ -104,14 +107,16 @@ p{
   padding-bottom: 1em;
 }
 .footcol1, .footcol2, .footcol3{
-/* width: 33%; */
-/* height: 300px; */
+height: 200px;
   display: inline-block;
   background-color: #25262c;
-  font-size: 1.2em;
-  line-height: 2em;
+  font-size: .9em;
+  line-height: 1.8em;
   text-align: left;
   background-color: #fff;
+  vertical-align: middle;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .footmark{
@@ -130,55 +135,78 @@ a:hover{
 }
 
 /* small */
-@media only screen and (max-width: 400px){
-
+@media only screen and (max-width: 450px){
   nav{
     visibility: hidden;
+    display: none;
+  }
+  .hamburger{
+    visibility: visible;
+    background-color: red;
+  }
+  div h1{
+    width: 12em;
   }
   .scenery{
     height: 266px;
     background-position: right, 0;
   }
   header{
-    max-width: 400px;
+    max-width: 420px;
   }
   .content{
-    max-width: 400px;
+    max-width: 420px;
   }
   footer{
-    max-width: 400px;
+    max-width: 420px;
   }
   .footcol2{
     visibility: hidden;
+    display: none;
   }
   .footcol1, .footcol3{
-  width: 50%;
-   background-color: red;
+    width: 40%;
+    background-color: red;
   }
 }
 
 /* medium */
-  @media only screen and (min-width: 401px) and (max-width: 960px){
+  @media only screen and (min-width: 451px) and (max-width: 700px){
   nav{
-    visibility: hidden;
+    visibility: visible;
+    display: none;
+  }
+  div h1{
+    width: 10em;
+  }
+  .scenery{
+    height: 266px;
+    background-position: right, 0;
   }
   header{
-    max-width: 700px;
+    max-width: 960px;
   }
   .content{
-    max-width: 700px;
+    max-width: 960px;
   }
   footer{
-    max-width: 700px;
+    max-width: 960px;
+  }
+  .footcol1, .footcol3{
+    width: 20%;
+    background-color: blue;
   }
   .footcol2{
-    visibility: hidden;
-    width: 0;  
+    width: 40%;
+    background-color: blue;
   }
 } 
 
 /* large */
-  @media only screen and (min-width: 961px){
+  @media only screen and (min-width: 701px) and (max-width: 960px){
+  div h1{
+    width: 10em;
+  }
   header{
     max-width: 1200px;
   }
@@ -195,8 +223,45 @@ a:hover{
     /* width: 90%; */
     height: 2em;
   }
+  nav{
+  border-bottom: 5px solid #1acac8;
+  }
+  nav ul li:hover{
+  border-bottom: 5px solid #ffffff;
+  }
 }
-  
+
+/* VERY LARGE */
+  @media only screen and (min-width: 961px){
+  nav{
+    visibility: visible;
+    display: none;
+  }
+  div h1{
+    width: 250px;
+  }
+  .scenery{
+    height: 266px;
+    background-position: right, 0;
+  }
+  header{
+    max-width: 1200px;
+  }
+  .content{
+    max-width: 1200px;
+  }
+  footer{
+    max-width: 1200px;
+  }
+  .footcol1, .footcol3{
+    width: 40%;
+    background-color: blue;
+  }
+  .footcol2{
+    width: 40%;
+    background-color: blue;
+  }
+}   
 /* dark blue:
 #25262C  
 
