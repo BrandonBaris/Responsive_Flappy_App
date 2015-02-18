@@ -18,7 +18,7 @@ nav{
   background-color: #25262c;
   margin-top: 30px;
   float: right;
-  font-size: .9em;
+  font-size: .9rem;
 }
 nav ul li{
   display: inline;
@@ -45,7 +45,7 @@ nav ul li{
 
 div h1{
   padding: 10px;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   color: #1acac8;
   /* background-color: #fff; */
 }
@@ -67,10 +67,11 @@ div h1{
 } */
 
 div.features ul li{
+  font-size: 0.7rem;
   background-color: #1acac8;
   color: #25262C;
   text-align: center;
-  padding: 1em;
+  padding: 1rem;
   border-top: thin solid #123123;
   box-shadow: 1px 1px 16px #999999;
 
@@ -93,10 +94,10 @@ span{
 p{
   text-transform: none;
   color: #25262C;
-  margin-top: .5em;
-  padding: 1em;
-  font-size: 1.5em;
-  line-height: 1.2em;
+  margin-top: .5rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   background-color: #ffffff;
   letter-spacing: 1px;
 }
@@ -105,19 +106,20 @@ p{
   background-color: #25262C;
   background-image: url(/images/border.png);
   background-repeat: repeat-x;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 .footcol1, .footcol2, .footcol3{
   height: 150px;
   display: inline-block;
   background-color: #25262c;
-  font-size: .9em;
-  line-height: 1.8em;
+  font-weight: 600;
+  font-size: .7rem;
+  line-height: 1.8rem;
   text-align: left;
   background-color: #25262c;
   vertical-align: text-top;
   margin-top: 20px;
-  padding: 10px;
+  padding: 1px;
 }
 
 .footmark{
@@ -146,7 +148,7 @@ a:hover{
     background-color: red;
   }
   div h1{
-    width: 13em;
+    width: 13rem;
   }
   header{
     max-width: 420px;
@@ -174,7 +176,7 @@ a:hover{
     /* display: none; */
   }
   div h1{
-    width: 10em;
+    width: 10rem;
   }
 
   header{
@@ -200,8 +202,8 @@ a:hover{
   @media only screen and (min-width: 701px) and (max-width: 960px){
   div h1{
     padding-left: 10%;
-    font-size: 3em;
-    width: 7.5em;
+    font-size: 3rem;
+    width: 7.5rem;
     word-spacing: 20px;
   }
   header{
@@ -225,15 +227,15 @@ a:hover{
     color: #25262c;
     background-color: #1acac8;
     vertical-align: text-bottom;
-    height: 2em;
+    height: 2rem;
   }
   nav{
     visibility: visible;
-    margin: 2em 2em 2em 2em;
+    margin: 2rem 2rem 2rem 2rem;
     border-bottom: thick solid #1acac8;
   }
   nav ul li:hover{
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     border-bottom: 5px solid #ffffff;
   }
   .scenery{
@@ -260,7 +262,7 @@ a:hover{
     border-left: medium solid #25262c;
   }
   div.footmap ul li{
-    padding-left: 2em;
+    padding-left: 2rem;
     border-left: medium solid #1acac8;
   }
 
@@ -268,7 +270,7 @@ a:hover{
     color: #25262c;
     background-color: #1acac8;
     margin: 0 5% 5%;
-    padding: .5em; 
+    padding: .5rem; 
   }
 }
 
@@ -277,9 +279,9 @@ a:hover{
 
   div h1{
     padding-left: 10%;
-    font-size: 3em;
-    width: 7.5em;
-    word-spacing: 1em;
+    font-size: 3rem;
+    width: 7.5rem;
+    word-spacing: 1rem;
   }
   .flappy{
     position: absolute;
@@ -291,12 +293,12 @@ a:hover{
   }
   nav{
     visibility: visible;
-    margin: 2em 2em 2em 2em;
+    margin: 2rem 2rem 2rem 2rem;
     border-bottom: thick solid #1acac8;
   }
 
   nav ul li:hover{
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     border-bottom: 5px solid #fff;
   }
   .scenery{
@@ -331,13 +333,13 @@ a:hover{
   }
   div.footmap ul li{
     border-left: medium solid #1acac8;
-    padding-left: 2em;
+    padding-left: 2rem;
   }
   .footmark{
     color: #25262c;
     background-color: #1acac8;
     margin: 0 5% 5%;
-    padding: .5em; 
+    padding: .5rem; 
   }
 }   
 /* dark blue:
