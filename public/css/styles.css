@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
@@ -16,20 +17,30 @@ body{
 
 nav{
   background-color: #25262c;
-  margin-top: 30px;
+  margin-right: 1rem;
+  margin-top: 2rem;
   float: right;
-  font-size: .9rem;
+  font-size: .8rem;
+  word-spacing: .8rem;
 }
+
+nav ul li:nth-child(5) {
+  word-spacing: 0;
+}
+
 nav ul li{
   display: inline;
   /* background-color: red; */
 }
 
 .hamburger{
-  visibility: hidden;
+  display: none;
+  padding: .5rem 1rem;
+  font-size: 1.8rem;
+  color: #1acac8;
 }
 .headlayout{
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   background-color: #25262c;
   padding-top: 10px;
   background-image: url(/images/border.png);
@@ -38,46 +49,49 @@ nav ul li{
 
 .headerlogo{
 /*   padding-left: 150px; */
-  height: 73px;
   background-color: #25262c;
   float: left;
 }
 
 div h1{
-  padding: 10px;
-  font-size: 1.4rem;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
   color: #1acac8;
-  /* background-color: #fff; */
+   /*background-color: #fff; */
+   height: 100%;
 }
 .flappy{
-  max-width: 30%;
+  width: 80px;
   float: left;  
 }
 .scenery{
   background-image: url(/images/scenery.png);
-  max-width: 700px;
+  /*max-width: 700px;*/
   /* width: auto; */
   height: 266px;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-position: right;
 }
 
 /* .shadow{
   box-shadow: 1px 1px 16px #999999;
 } */
+div.features {
+  box-shadow: 1px 1px 16px #999999;
+}
 
 div.features ul li{
   font-size: 0.7rem;
+  font-weight: bold;
   background-color: #1acac8;
   color: #25262C;
   text-align: center;
   padding: 1rem;
   border-top: thin solid #123123;
-  box-shadow: 1px 1px 16px #999999;
-
 }
+
 div.features ul li:first-child{
-  /*feature header*/
   background-color: #25262C;
   color: #1acac8;
   text-align: center;
@@ -95,9 +109,9 @@ p{
   text-transform: none;
   color: #25262C;
   margin-top: .5rem;
-  padding: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  padding: 2rem 3.3rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
   background-color: #ffffff;
   letter-spacing: 1px;
 }
@@ -106,25 +120,24 @@ p{
   background-color: #25262C;
   background-image: url(/images/border.png);
   background-repeat: repeat-x;
-  padding-bottom: 1rem;
+  padding: 2rem 0;
 }
 .footcol1, .footcol2, .footcol3{
-  height: 150px;
   display: inline-block;
   background-color: #25262c;
   font-weight: 600;
   font-size: .7rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   text-align: left;
   background-color: #25262c;
   vertical-align: text-top;
   margin-top: 20px;
-  padding: 1px;
 }
 
 .footmark{
   text-align: center;
-  vertical-align: middle;
+  padding-bottom: 1rem;
+  font-size: .8rem;
 }
 a{
   color: #1acac8;
@@ -144,12 +157,10 @@ a:hover{
     display: none;
   }
   .hamburger{
+    float: right;
     visibility: visible;
-    background-color: red;
   }
-  div h1{
-    width: 13rem;
-  }
+
   header{
     max-width: 420px;
   }
@@ -164,21 +175,27 @@ a:hover{
     display: none;
   }
   .footcol1, .footcol3{
-    width: 40%;
-/*     background-color: red;
-   */  }
+    width: 35%;
+    padding: 0 1.5rem;
+     }
 }
 
 /* ------------------------------------ medium */
   @media only screen and (min-width: 451px) and (max-width: 700px){
   nav{
     visibility: visible;
-    /* display: none; */
   }
   div h1{
-    width: 10rem;
+    width: 5rem;
   }
 
+  .flappy {
+    margin-top: 1rem;
+    width: 10%;
+  }
+  .headlayout {
+    padding: 2rem;
+  }
   header{
     max-width: 960px;
   }
@@ -189,30 +206,36 @@ a:hover{
     max-width: 960px;
   }
   .footcol1, .footcol3{
-    width: 20%;
+    text-align: left;
+    width: 24%;
     background-color: #25262c;
   }
   .footcol2{
-    width: 40%;
+    width: 32%;
     background-color: #25262c;
   }
 } 
 
 /* ------------------------------------ large */
   @media only screen and (min-width: 701px) and (max-width: 960px){
-  div h1{
-    padding-left: 10%;
-    font-size: 3rem;
-    width: 7.5rem;
-    word-spacing: 20px;
+  .headlayout {
+    padding: 2rem;
   }
+  div h1{
+    font-size: 3rem;
+    width: 22rem;
+    word-spacing: 3.5rem;
+  }
+
   header{
     max-width: 1200px;
   }
+
   .flappy{
     position: absolute;
+    width: 100px;
     z-index: 1;
-    left: 20%;
+    left: 220px;
   }
   header div span{
     color: #1acac8;
@@ -223,15 +246,9 @@ a:hover{
   footer{
     max-width: 1200px;
   }
-  .footmark{
-    color: #25262c;
-    background-color: #1acac8;
-    vertical-align: text-bottom;
-    height: 2rem;
-  }
   nav{
     visibility: visible;
-    margin: 2rem 2rem 2rem 2rem;
+    padding-bottom: 1rem;
     border-bottom: thick solid #1acac8;
   }
   nav ul li:hover{
@@ -240,24 +257,24 @@ a:hover{
   }
   .scenery{
     border: medium solid #000000;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-top: 3rem;
+    margin-left: 3rem;
     float: left;
-    min-width: 450px;
+    min-width: 50%;
     height: 266px;
     background-position: right, 0;
     box-shadow: 1px 1px 16px #999999;
 
   }
   div.features{
+    width: 35%;
     float: right;
-    margin-top: 5%;
-    margin-right: 5%;
+    margin-top: 3rem;
+    margin-right: 3rem;
   }
 
   .footcol1, .footcol2, .footcol3{
-    /* padding: 20px; */
-    width: 25%;
+    width: 30%;
     background-color: #25262c;
     border-left: medium solid #25262c;
   }
@@ -268,6 +285,7 @@ a:hover{
 
   .footmark{
     color: #25262c;
+    vertical-align: middle;
     background-color: #1acac8;
     margin: 0 5% 5%;
     padding: .5rem; 
@@ -277,23 +295,27 @@ a:hover{
 /* ------------------------------------ VERY LARGE */
   @media only screen and (min-width: 961px){
 
-  div h1{
-    padding-left: 10%;
-    font-size: 3rem;
-    width: 7.5rem;
-    word-spacing: 1rem;
+  .headlayout {
+    padding: 2rem;
   }
+  div h1{
+    font-size: 3rem;
+    width: 22rem;
+    word-spacing: 3.5rem;
+  }
+
   .flappy{
     position: absolute;
+    width: 100px;
     z-index: 1;
-    left: 20%;
+    left: 220px;
   }
   header div span{
     color: #1acac8;
   }
   nav{
     visibility: visible;
-    margin: 2rem 2rem 2rem 2rem;
+    padding-bottom: 1rem;
     border-bottom: thick solid #1acac8;
   }
 
@@ -303,19 +325,20 @@ a:hover{
   }
   .scenery{
     border: medium solid #000000;
-    margin-top: 5%;
-    margin-left: 9%;
+    margin-top: 3rem;
+    margin-left: 3rem;
     float: left;
-    min-width: 600px;
+    min-width: 58%%;
     height: 266px;
     background-position: right, 0;
     box-shadow: 1px 1px 16px #999999;
 
   }
   div.features{
+    width: 30%;
     float: right;
-    margin-top: 5%;
-    margin-right: 9%;
+    margin-top: 3rem;
+    margin-right: 3rem;
   }
   header{
     max-width: 100%;
@@ -327,8 +350,7 @@ a:hover{
     max-width: 100%;
   }
   .footcol1, .footcol2, .footcol3{
-    /* padding: 20px; */
-    width: 25%;
+    width: 30%;
     background-color: #25262c;
   }
   div.footmap ul li{
